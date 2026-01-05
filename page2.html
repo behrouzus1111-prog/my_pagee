@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه دوم</title>
+    <link rel="stylesheet" href="style-page2.css">
+</head>
+<body>
+    <!-- متن فارسی در وسط صفحه -->
+    <div class="center-text">
+        <h1 class="persian-text">بعضی آدما به این دنیا اومدن که با حضور گرمشون یه حس خوب موندگار تو دل فضا بسازن</h1>
+        <p class="sub-text">بودنت قشنگه 😊</p>
+    </div>
+    
+<!-- دکمه برای رفتن به صفحه بعدی -->
+<button id="nextPageBtn" class="next-btn">بعدی</button>
+
+<script>
+    document.getElementById('nextPageBtn').addEventListener('click', function() {
+        window.location.href = "page3.html";
+    });
+</script>
+</body>
+</html>

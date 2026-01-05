@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه سوم</title>
+    <link rel="stylesheet" href="style-page3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- کادر متن -->
+    <div class="text-box">
+        <div class="text-content">
+            <h1 class="title">تولدت مبارک  🌹</h1>
+            <p class="content">
+            امروز که به دنیا اومدی دنیا قشنگتر شد. آرزو میکنم دلت همیشه آروم باشه و لبخندت دلیل حال خوب روز هات.
+            روزایی پر نور شبایی بی دل نگرونی و دلت امن ترین جای دنیا.
+            امیدوارم سال جدید زندگیت پر از اتفاقای خوب باشه.
+            </p>
+        </div>
+    </div>
+
+    <!-- پلیر صوتی ساده -->
+    <div class="audio-player">
+        <div class="player-controls">
+            <button id="playBtn" class="control-btn">
+                <i class="fas fa-play"></i>
+            </button>
+            
+            <button id="pauseBtn" class="control-btn">
+                <i class="fas fa-pause"></i>
+            </button>
+            
+            <button id="stopBtn" class="control-btn">
+                <i class="fas fa-stop"></i>
+            </button>
+            
+            <div class="volume-control">
+                <i class="fas fa-volume-up"></i>
+                <input type="range" id="volumeSlider" min="0" max="100" value="50">
+            </div>
+        </div>
+        
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </div>
+
+    <!-- عنصر صوتی با فایل ثابت -->
+    <audio id="audioElement">
+        <source src="audio/my-audio.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script-page3.js"></script>
+</body>
+</html>

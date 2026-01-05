@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ایمپورت فونت فارسی */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap');
+
+body {
+    background-image: url('route-66-road-trip-straight-road.jpg.fallback.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: 'Noto Nastaliq Urdu', 'B Nazanin', Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* اضافه شده */
+}
+
+/* استایل متن فارسی */
+.persian-text {
+    font-family: 'Noto Nastaliq Urdu', 'B Nazanin', Tahoma, sans-serif;
+    font-size: 2.7rem;
+    font-weight: bold;
+    color: #090d11;
+    text-align: center;
+    margin-top: 170px;
+    margin-bottom: 80px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    line-height: 1.6;
+    padding: 0 20px;
+    max-width: 800px;
+}
+
+/* استایل کادر */
+.rounded-box {
+    width: 300px;
+    height: 90px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    
+    /* موقعیت کادر در یک سوم پایین */
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* اضافه شده: برای قرار دادن محتوا در وسط کادر */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* استایل‌های اضافه شده برای ویژگی جدید */
+
+/* کانتینر رمز عبور */
+.password-container {
+    width: 100%;  /* تغییر به 100% */
+    height: 100%; /* تغییر به 100% */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* اضافه کردن این خط */
+    top: 0;
+    left: 0;
+}
+
+/* فیلد ورود رمز */
+.password-input {
+    width: 80%;
+    height: 50px;
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.95);
+    transition: all 0.3s ease;
+}
+
+.password-input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+.password-input::placeholder {
+    color: #999;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+}
+
+/* پیغام خطا */
+.error-message {
+    height: 20px;
+    margin-top: 5px;
+    color: #e74c3c;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.error-message.show {
+    opacity: 1;
+}
+
+/* دکمه ادامه */
+.continue-btn {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-family: 'Noto Nastaliq Urdu', 'B Nazanin', Tahoma, sans-serif;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.continue-btn:hover {
+    background-color: #219653;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.continue-btn:active {
+    transform: translateY(0);
+}
+
+.continue-btn:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* استایل‌های ریسپانسیو */
+@media (max-width: 768px) {
+    .persian-text {
+        font-size: 1.8rem;
+        margin-top: 80px;
+        margin-bottom: 60px;
+    }
+    
+    .rounded-box {
+        width: 280px;
+        height: 180px;
+    }
+    
+    .password-input {
+        font-size: 1.8rem;
+        height: 45px;
+    }
+    
+    .continue-btn {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        bottom: 20px;
+        left: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .persian-text {
+        font-size: 1.5rem;
+        margin-top: 60px;
+        margin-bottom: 40px;
+    }
+    
+    .rounded-box {
+        width: 250px;
+        height: 160px;
+    }
+    
+    .password-input {
+        font-size: 1.6rem;
+        height: 40px;
+    }
+    
+    .password-input::placeholder {
+        font-size: 1.2rem;
+    }
+    
+    .continue-btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+        bottom: 15px;
+        left: 15px;
+    }
+}

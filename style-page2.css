@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ایمپورت فونت فارسی */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap');
+
+body {
+    /* تصویر زمینه دلخواه شما */
+    background-image: url('Autumn-road-from-Islam-Khalkhal.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: 'Noto Nastaliq Urdu', 'B Nazanin', Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* متن در وسط صفحه */
+.center-text {
+    text-align: center;
+    max-width: 800px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 2px solid #2c3e50;
+}
+
+/* متن فارسی اصلی */
+.persian-text {
+    font-family: 'Noto Nastaliq Urdu', 'B Nazanin', Tahoma, sans-serif;
+    font-size: 2.6rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    line-height: 1.5;
+}
+
+/* متن فرعی */
+.sub-text {
+    font-family: 'Noto Nastaliq Urdu', 'B Nazanin', Tahoma, sans-serif;
+    font-size: 2rem;
+    color: #5d6d7e;
+    line-height: 1.6;
+}
+
+/* دکمه بعدی */
+.next-btn {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    padding: 15px 30px;
+    font-size: 1.3rem;
+    font-family: 'Noto Nastaliq Urdu', 'B Nazanin', Tahoma, sans-serif;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.next-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.next-btn:active {
+    transform: translateY(0);
+}
+
+/* استایل‌های ریسپانسیو */
+@media (max-width: 768px) {
+    .center-text {
+        padding: 30px;
+        margin: 20px;
+    }
+    
+    .persian-text {
+        font-size: 2.2rem;
+    }
+    
+    .sub-text {
+        font-size: 1.4rem;
+    }
+    
+    .next-btn {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+        bottom: 20px;
+        left: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .center-text {
+        padding: 20px;
+        margin: 15px;
+    }
+    
+    .persian-text {
+        font-size: 1.8rem;
+    }
+    
+    .sub-text {
+        font-size: 1.2rem;
+    }
+    
+    .next-btn {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        bottom: 15px;
+        left: 15px;
+    }
+}
